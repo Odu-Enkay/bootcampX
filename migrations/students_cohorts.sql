@@ -1,6 +1,9 @@
 CREATE TABLE cohorts (
   id SERIAL PRIMARY KEY NOT NULL,
-  name VARCHAR(255) NOT NULL,
+  name VARCHAR(255) NOT NULL,SELECT day, sum(assignment_submissions) as total_assignment
+FROM assignments  
+GROUP By day
+ORDER BY day;
   start_date DATE,
   end_date DATE
 );
